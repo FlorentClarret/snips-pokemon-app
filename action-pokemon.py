@@ -1,10 +1,10 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 from hermes_python.hermes import Hermes
 
 from sample.IntentCaller import IntentCaller
-from sample.tools.SnipsTools import SnipsConfigParser
+from sample.config.SnipsTools import SnipsConfigParser
 
 CONFIG_INI_FILE = "config.ini"
 
@@ -18,8 +18,8 @@ if __name__ == "__main__":
     except:
         config = None
 
-    mqtt_address = "{}:{}".format(config.get("mqtt.address", MQTT_DEFAULT_ADDRESS),
-                                  str(config.get("mqtt.port", MQTT_DEFAULT_PORT)))
+    mqtt_address = "{}:{}".format(config.get("mqtt").get("address"),
+                                  str(config.get("mqtt").get("port")))
 
     with Hermes(mqtt_address) as h:
         h.subscribe_intents(IntentCaller(config).master_intent_callback).start()

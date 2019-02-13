@@ -1,7 +1,8 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import requests
+
 from sample.intents import PokemonIntent
 
 
@@ -12,9 +13,10 @@ class PokemonOrderIntent(PokemonIntent.PokemonIntent):
         hermes.publish_end_session(intent_message.session_id, "")
 
         pokemon = intent_message.slots.pokemon.first().value
-        pokemon_order = str(requests.get("https://pokeapi.co/api/v2/pokemon/" + pokemon).json().get("order"))
+        pokemon_order = str(
+            requests.get("{}pokemon/{}".format(self.config.get("pokeapi").get("url"), pokemon)).json().get("order"))
 
         # if need to speak the execution result by tts
         hermes.publish_start_session_notification(intent_message.site_id,
-                                                  "The " + pokemon + " order is " + pokemon_order,
+                                                  "The " + pokemon + "'s order is " + pokemon_order,
                                                   "Pokemon App")
