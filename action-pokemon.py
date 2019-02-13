@@ -3,8 +3,8 @@
 
 from hermes_python.hermes import Hermes
 
-from sample.IntentCaller import IntentCaller
-from sample.config.SnipsTools import SnipsConfigParser
+from application.IntentCaller import IntentCaller
+from application.config.SnipsTools import SnipsConfigParser
 
 CONFIG_INI_FILE = "config.ini"
 

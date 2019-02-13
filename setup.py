@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='snips-pokemon-app',
+    name='application',
     version='1.0.0',
     description='A great vocal assistant to interact with PokeApi',
     author='Florent Clarret',
@@ -10,5 +10,5 @@ setup(
     install_requires=['configparser'],
     test_suite="tests",
     keywords=['snips', 'pokemon'],
-    packages=['sample']
+    packages=['application']
 )

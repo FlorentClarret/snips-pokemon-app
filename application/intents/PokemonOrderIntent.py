@@ -3,7 +3,7 @@
 
 import requests
 
-from sample.intents import PokemonIntent
+from application.intents import PokemonIntent
 
 POKEAPI_DEFAULT_URL = "https://pokeapi.co/api/v2/"
 
