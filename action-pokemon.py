@@ -18,8 +18,8 @@ if __name__ == "__main__":
     except:
         config = None
 
-    mqtt_address = "{}:{}".format(config.get("mqtt").get("address"),
-                                  str(config.get("mqtt").get("port")))
+    mqtt_address = "{}:{}".format(config.get("mqtt").get("address", MQTT_DEFAULT_ADDRESS),
+                                  str(config.get("mqtt").get("port")), MQTT_DEFAULT_PORT)
 
     with Hermes(mqtt_address) as h:
         h.subscribe_intents(IntentCaller(config).master_intent_callback).start()

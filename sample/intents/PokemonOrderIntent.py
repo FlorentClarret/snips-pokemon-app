@@ -5,6 +5,8 @@ import requests
 
 from sample.intents import PokemonIntent
 
+POKEAPI_DEFAULT_URL = "https://pokeapi.co/api/v2/"
+
 
 class PokemonOrderIntent(PokemonIntent.PokemonIntent):
 
@@ -14,7 +16,9 @@ class PokemonOrderIntent(PokemonIntent.PokemonIntent):
 
         pokemon = intent_message.slots.pokemon.first().value
         pokemon_order = str(
-            requests.get("{}pokemon/{}".format(self.config.get("pokeapi").get("url"), pokemon)).json().get("order"))
+            requests.get(
+                "{}pokemon/{}".format(self.config.get("pokeapi").get("url", POKEAPI_DEFAULT_URL), pokemon)).json().get(
+                "order"))
 
         # if need to speak the execution result by tts
         hermes.publish_start_session_notification(intent_message.site_id,
