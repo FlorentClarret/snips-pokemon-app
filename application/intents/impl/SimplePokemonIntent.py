@@ -26,5 +26,5 @@ class SimplePokemonIntent(PokemonIntent.PokemonIntent):
 
         # if need to speak the execution result by tts
         hermes.publish_start_session_notification(intent_message.site_id,
-                                                  "Its {} is {}".format(key.replace('_', ' '), value),
+                                                  "{}'s {} is {}".format(pokemon, key.replace('_', ' '), value),
                                                   "Pokemon App")
