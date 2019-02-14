@@ -13,6 +13,7 @@ By default, this application hits the online PokeApi services. You can self-host
 This is a work in progress application. You will find the available features in the following sections :
 
 * Return the id of a specific Pokémon.
+* Return the name of a Pokémon using it's id.
 
 ### Pokémon's id
 
@@ -34,6 +35,27 @@ Example :
 
 * Question : *Hey Snips, what is the id of Pikachu?*
 * Answer : *The Pikachu's id is 35.*
+
+### Pokémon's name 
+
+#### Intent
+
+| Intent | Slots | Value | 
+| --- | --- | --- |
+| PokemonName | pokemon | The Pokemon's id |
+
+#### Training examples
+
+| Intent | Example |  
+| --- | --- | 
+| PokemonName | Give me the name of the *pokemon*? | 
+| PokemonName | How is called the *pokemon*? | 
+| PokemonName | What is the name of the *pokemon*? | 
+
+Example : 
+
+* Question : *Hey Snips, what is the name of the pokemon number 35?*
+* Answer : *Its name is Pikachu.*
 
 ## Hardware
 
