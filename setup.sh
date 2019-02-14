@@ -7,7 +7,7 @@ then
 
     PYTHON=`which python3`
 
-    if [ ! -f ${PYTHON} ]
+    if [[ ! -f ${PYTHON} ]]
     then
         echo "could not find python"
     fi
