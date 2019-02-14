@@ -5,8 +5,7 @@ from enum import Enum
 
 
 class Intent(Enum):
-    POKEMON_ID = "florentclarret:PokemonId"
-    POKEMON_NAME = "florentclarret:PokemonName"
+    SIMPLE_QUERY = "florentclarret:PokemonSimpleQuery"
 
     @staticmethod
     def from_name(name):

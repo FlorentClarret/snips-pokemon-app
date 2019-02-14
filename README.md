@@ -12,50 +12,34 @@ By default, this application hits the online PokeApi services. You can self-host
 
 This is a work in progress application. You will find the available features in the following sections :
 
-* Return the id of a specific Pokémon.
-* Return the name of a Pokémon using it's id.
+* Return the id/name/weight/base experience/order/encounters area/height of a specific Pokémon. This is perform in one single intent. I will call it "Pokémon's simple information".
 
-### Pokémon's id
+### Pokémon's simple information.
 
 #### Intent
 
-| Intent | Slots | Value | 
-| --- | --- | --- |
-| PokemonId | pokemon | The Pokemon's name |
+| Intent | Slots | Description | Value | 
+| --- | --- | --- | --- |
+| PokemonSimpleQuery | PokemonName | The Pokémon's name | Any Pokémon name or there number (eg: Pokémon number 25) |
+| PokemonSimpleQuery | PokemonSimpleKey | The "simple" information you want to have | id/name/weight/base experience/order/encounters area/height |
 
 #### Training examples
 
 | Intent | Example |  
 | --- | --- | 
-| PokemonId | What is the id of *pokemon*? | 
-| PokemonId | Which id is *pokemon*? | 
-| PokemonId | What is *pokemon*'s id? | 
+| PokemonSimpleQuery | What is the *key* of *Pokémon*? | 
+| PokemonSimpleQuery | Give me the *key* of the *Pokémon*. | 
+| PokemonSimpleQuery | What is the value of the *key* for *Pokémon*? | 
 
 Example : 
 
 * Question : *Hey Snips, what is the id of Pikachu?*
-* Answer : *The Pikachu's id is 35.*
+* Answer : *It's 25.*
 
-### Pokémon's name 
+Example 2 :
 
-#### Intent
-
-| Intent | Slots | Value | 
-| --- | --- | --- |
-| PokemonName | pokemon | The Pokemon's id |
-
-#### Training examples
-
-| Intent | Example |  
-| --- | --- | 
-| PokemonName | Give me the name of the *pokemon*? | 
-| PokemonName | How is called the *pokemon*? | 
-| PokemonName | What is the name of the *pokemon*? | 
-
-Example : 
-
-* Question : *Hey Snips, what is the name of the pokemon number 35?*
-* Answer : *Its name is Pikachu.*
+* Question : *Hey Snips, what is the name of the Pokémon number 25?*
+* Answer : *It's Pikachu.* 
 
 ## Hardware
 
