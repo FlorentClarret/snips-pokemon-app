@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from application.intents.Intent import Intent
-from application.intents.PokemonIdIntent import PokemonIdIntent
-from application.intents.PokemonNameIntent import PokemonNameIntent
+from application.intents.factory.Intent import Intent
+from application.intents.impl.PokemonIdIntent import PokemonIdIntent
+from application.intents.impl.PokemonNameIntent import PokemonNameIntent
 
 
 class IntentFactory(object):

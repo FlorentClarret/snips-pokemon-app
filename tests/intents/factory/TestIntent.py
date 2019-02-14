@@ -3,7 +3,7 @@
 
 import unittest
 
-from application.intents.Intent import Intent
+from application.intents.factory.Intent import Intent
 
 
 class TestIntent(unittest.TestCase):

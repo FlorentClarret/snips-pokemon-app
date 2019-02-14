@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from application.intents.Intent import Intent
-from application.intents.IntentFactory import IntentFactory
+from application.intents.factory.Intent import Intent
+from application.intents.factory.IntentFactory import IntentFactory
 
 
 class IntentCaller:

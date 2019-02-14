@@ -3,9 +3,9 @@
 
 import unittest
 
-from application.intents.Intent import Intent
-from application.intents.IntentFactory import IntentFactory
-from application.intents.PokemonIdIntent import PokemonIdIntent
+from application.intents.factory.Intent import Intent
+from application.intents.factory.IntentFactory import IntentFactory
+from application.intents.impl.PokemonIdIntent import PokemonIdIntent
 
 
 class TestIntentFactory(unittest.TestCase):
