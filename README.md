@@ -26,9 +26,9 @@ This is a work in progress application. You will find the available features in 
 
 | Intent | Example |  
 | --- | --- | 
-| PokemonId | What is the id of pokemon? | 
-| PokemonId | Which id is pokemon? | 
-| PokemonId | What is pokemon's id? | 
+| PokemonId | What is the id of *pokemon*? | 
+| PokemonId | Which id is *pokemon*? | 
+| PokemonId | What is *pokemon*'s id? | 
 
 Example : 
 
