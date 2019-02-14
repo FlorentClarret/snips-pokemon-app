@@ -8,7 +8,7 @@ from application.intents import PokemonIntent
 POKEAPI_DEFAULT_URL = "https://pokeapi.co/api/v2/"
 
 
-class PokemonOrderIntent(PokemonIntent.PokemonIntent):
+class PokemonIdIntent(PokemonIntent.PokemonIntent):
 
     def execute(self, hermes, intent_message):
         # terminate the session first if not continue
@@ -22,5 +22,5 @@ class PokemonOrderIntent(PokemonIntent.PokemonIntent):
 
         # if need to speak the execution result by tts
         hermes.publish_start_session_notification(intent_message.site_id,
-                                                  "The " + pokemon + "'s order is " + pokemon_order,
+                                                  "The " + pokemon + "'s id is " + pokemon_order,
                                                   "Pokemon App")

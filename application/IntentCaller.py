@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from application.intents.PokemonOrderIntent import PokemonOrderIntent
+from application.intents.PokemonIdIntent import PokemonIdIntent
 
 
 class IntentCaller:
@@ -14,8 +14,8 @@ class IntentCaller:
 
         print('[master_intent_callback] intent: {}'.format(coming_intent))
 
-        if coming_intent == 'florentclarret:PokemonOrder':
-            intent = PokemonOrderIntent(self.config)
+        if coming_intent == 'florentclarret:PokemonId':
+            intent = PokemonIdIntent(self.config)
 
         if intent is not None:
             intent.execute(hermes, intent_message)
