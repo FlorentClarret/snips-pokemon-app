@@ -12,7 +12,7 @@ By default, this application hits the online PokeApi services. You can self-host
 
 This is a work in progress application. You will find the available features in the following sections :
 
-* Return the id/name/weight/base experience/order/encounters area/height of a specific Pokémon. This is perform in one single intent. I will call it "Pokémon's simple information".
+* Return the id/name/weight/base experience/order/encounters area/height of a specific Pokémon. This is performed in one single intent. I will call it "Pokémon's simple information".
 
 ### Pokémon's simple information.
 
