@@ -18,7 +18,7 @@ class PokemonIdIntent(PokemonIntent.PokemonIntent):
         pokemon_order = str(
             requests.get(
                 "{}pokemon/{}".format(self.config.get("pokeapi").get("url", POKEAPI_DEFAULT_URL), pokemon)).json().get(
-                "order"))
+                "id"))
 
         # if need to speak the execution result by tts
         hermes.publish_start_session_notification(intent_message.site_id,
