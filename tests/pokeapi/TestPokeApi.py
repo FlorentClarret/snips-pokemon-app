@@ -3,7 +3,7 @@
 
 import unittest
 
-from application.config.SnipsTools import SnipsConfigParser
+from application.config.ConfigurationTools import SnipsConfigParser
 from application.pokeapi.PokeApi import PokeApi
 from application.pokeapi.PokemonKey import PokemonKey
 
