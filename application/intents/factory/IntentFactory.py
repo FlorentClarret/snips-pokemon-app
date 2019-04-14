@@ -8,8 +8,8 @@ from application.intents.factory.Intent import Intent
 class IntentFactory(object):
 
     @staticmethod
-    def build(intent, config):
+    def build(intent, poke_api):
         if intent == Intent.SIMPLE_QUERY:
-            return SimplePokemonIntent(config)
+            return SimplePokemonIntent(poke_api)
 
         raise ValueError("No intent found for {}".format(intent))

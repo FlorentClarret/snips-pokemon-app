@@ -6,14 +6,14 @@ from application.intents.factory.IntentFactory import IntentFactory
 
 
 class IntentCaller:
-    def __init__(self, config):
-        self.config = config
+    def __init__(self, poke_api):
+        self.poke_api = poke_api
 
     def master_intent_callback(self, hermes, intent_message):
         print('[master_intent_callback] intent: {}'.format(intent_message.intent.intent_name))
 
         try:
-            intent = IntentFactory.build(Intent.from_name(intent_message.intent.intent_name), self.config)
+            intent = IntentFactory.build(Intent.from_name(intent_message.intent.intent_name), self.poke_api)
             intent.execute(hermes, intent_message)
         except ValueError:
             print('[master_intent_callback] unknown intent {}'.format(intent_message.intent.intent_name))
