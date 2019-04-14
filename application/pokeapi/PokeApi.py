@@ -15,3 +15,6 @@ class PokeApi:
         full_url = "{}pokemon/{}".format(base_url, pokemon)
 
         return requests.get(full_url).json()
+
+    def get_pokemon_attribute(self, pokemon, pokemon_key):
+        return str(self.get_pokemon(pokemon).get(pokemon_key.value))

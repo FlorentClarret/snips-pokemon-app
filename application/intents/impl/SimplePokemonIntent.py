@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from application.intents import PokemonIntent
+from application.pokeapi.PokemonKey import PokemonKey
 
 
 class SimplePokemonIntent(PokemonIntent.PokemonIntent):
@@ -28,7 +29,7 @@ class SimplePokemonIntent(PokemonIntent.PokemonIntent):
                                                       "Pokemon App")
             return
 
-        value = str(self.poke_api.get_pokemon(pokemon.value).get(key.value))
+        value = str(self.poke_api.get_pokemon_attribute(pokemon.value, PokemonKey.from_name(key.value)))
 
         # if need to speak the execution result by tts
         hermes.publish_start_session_notification(intent_message.site_id,
