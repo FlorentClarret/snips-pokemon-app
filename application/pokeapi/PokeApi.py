@@ -7,6 +7,8 @@ from application.config.ConfigurationKey import ConfigurationKey
 
 POKE_API_DEFAULT_URL = "https://pokeapi.co/api/v2/"
 
+POKE_API_PATH_POKEMON = "pokemon/"
+
 
 class PokeApi:
     def __init__(self, config):
@@ -15,7 +17,7 @@ class PokeApi:
     def get_pokemon(self, pokemon):
         base_url = self.config.get(ConfigurationKey.POKEAPI.value).get(ConfigurationKey.POKEAPI_URL.value,
                                                                        POKE_API_DEFAULT_URL)
-        full_url = "{}pokemon/{}".format(base_url, pokemon)
+        full_url = "{}/{}/{}".format(base_url, POKE_API_PATH_POKEMON, pokemon)
 
         return requests.get(full_url).json()
 
